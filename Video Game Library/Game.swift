@@ -8,24 +8,23 @@
 
 import Foundation
 
-class Game {
-    let name: String
-    let releasedDate: Date
-    let description: String
-    let genre: String
-    let price: Double
-    var checkedIn: Bool
-    var dueDate: Date?
-    let rating: String
+class Game { //Making the game class for us to have a template for which to add games
     
-    init(name: String, releasedDate: Date, description: String, genre: String, price: Double, checkedIn: Bool, dueDate: Date, rating: String) {
+    //Making properties for the games we will be adding
+    let name: String
+    var checkedIn: Bool = true
+    var dueDate: Date?
+    var genre: String
+    var rating: String
+    var price: Double
+   
+    //Initializing properties so that we can call the class and enter certain values for properties as parameters for the game.
+    init(name: String, genre: String, rating: String, price: Double) {
         self.name = name
-        self.releasedDate = releasedDate
-        self.description = description
         self.genre = genre
-        self.price = price
-        self.checkedIn = checkedIn
         self.rating = rating
+        self.price = price
+
         
     }
 }
